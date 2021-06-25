@@ -26,15 +26,20 @@ var circles = [];	// variable to store all circles in one Array
 
         // TODO 2 : Create a function that draws a circle 
         function drawCircle() {
+             
+        circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
+        physikz.addRandomVelocity(circle, canvas);
+        view.addChild(circle);
+        circles.push(circle);
+
 
         }
 
         // TODO 3 / 8 : Call the drawCircle() function 
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
-        drawCircle();
+        for (var i = 0; i < 100; i++) {
+            drawCircle()
+        }
+        
 
 
         ////////////////////////////////////////////////////////////
@@ -48,11 +53,7 @@ var circles = [];	// variable to store all circles in one Array
         */
         function update() {
             // TODO 4 : Update the circle's position //git add .
-            physikz.updatePosition([0]);
-        	physikz.updatePosition([1]);
-        	physikz.updatePosition([2]);
-        	physikz.updatePosition([3]);
-        	physikz.updatePosition([4]);
+            
             
             // TODO 5 / 10 : Call game.checkCirclePosition() on your circles.
         
@@ -62,7 +63,7 @@ var circles = [];	// variable to store all circles in one Array
                 physikz.updatePosition(eachValue);
                 game.checkCirclePosition(eachValue);
             }
-            
+        }  
         
     
         /* 
@@ -76,10 +77,16 @@ var circles = [];	// variable to store all circles in one Array
             if ( circle.x > canvas.width ) {
                 circle.x = 0;
             }
-            
+            if ( circle.x < 0 ) {
+                circle.x = canvas.width;
+            }
             // TODO 7 : YOUR CODE STARTS HERE //////////////////////
-            
-
+            if ( circle.y > canvas.height ) {
+                circle.y = 0;
+            }
+            if ( circle.y < 0 ) {
+                circle.y = canvas.height;
+            }
 
             // YOUR TODO 7 CODE ENDS HERE //////////////////////////
         }
