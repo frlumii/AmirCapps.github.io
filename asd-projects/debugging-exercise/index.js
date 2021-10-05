@@ -48,7 +48,7 @@ function makeCircle(id){
     
     // this gives the circle object all of the data that it needs to store
     circle.id = "#" + id;
-    circle.x = Math.random() * maX + circleRadius;
+    circle.x = Math.random() * maxX + circleRadius;
     circle.y = Math.random() * maxY + circleRadius;
     circle.speedX = decideSpeed();
     circle.speedY = decideSpeed();
@@ -67,7 +67,7 @@ function getId(number){
 }
 
 // this adds a circle into the HTML
-function addNewCircleElement (circle, id); {
+function addNewCircleElement (circle, id) {
 
     // this creates the HTML for a new circle element 
     var $circle = $('<div>').attr('id', id)
@@ -109,7 +109,7 @@ function update() {
 
 // this moves circles in memory but doesn't update them on the screen
 function moveCircle(circle){
-    circle.x = circle.speedX;
+    circle.x += circle.speedX;
     circle.y += circle.speedY;
 }
 
@@ -140,7 +140,7 @@ function bounceCircle(circle){
 
 // this redraws the circle's position on the screen
 function updateCircleOnScreen(circle){
-    maxCircles = 0;
+  
 
     // these lines redraw the circle's position
     $(circle.id).css('left', circle.x);
