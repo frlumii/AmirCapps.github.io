@@ -6,6 +6,23 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   //////////////////////////// SETUP /////////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
+  
+  var KEY = {
+    "LEFT": 37,
+  }
+  
+  var KEY = {
+    "RIGHT": 39,
+  }
+
+  var KEY = {
+    "UP": 38,
+  }
+
+  var KEY = {
+    "DOWN": 40,
+  }
+
 
   // Constant Variables
   var FRAME_RATE = 60;
@@ -16,7 +33,7 @@ function runProgram(){
 
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
-  $(document).on('eventType', handleEvent);                           // change 'eventType' to the type of event you want to handle
+  $(document).on('keydown', handleKeyDown);                           // change 'eventType' to the type of event you want to handle
 
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
@@ -34,10 +51,24 @@ function runProgram(){
   /* 
   Called in response to events.
   */
-  function handleEvent(event) {
+  function handleKeyDown(event) {
+    if (event.which === KEY.ArrowRight) {
+      console.log("right pressed");
+    } 
+    
+    else if (event.which === KEY.ArrowDown) {
+      console.log("Down pressed");
+    }
 
+    else if (event.which === KEY.ArrowUp) {
+      console.log("Up pressed");
+    }
+
+    else if (event.which === KEY.ArrowLeft) {
+      console.log("Left pressed");
+    }
   }
-
+  console.log(handleKeyDown);
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
