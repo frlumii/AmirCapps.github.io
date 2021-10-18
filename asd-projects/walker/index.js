@@ -9,26 +9,25 @@ function runProgram(){
   
   var KEY = {
     "LEFT": 37,
-  }
-  
-  var KEY = {
     "RIGHT": 39,
-  }
-
-  var KEY = {
     "UP": 38,
-  }
-
-  var KEY = {
     "DOWN": 40,
   }
+  
+  
 
+  
+  
 
   // Constant Variables
   var FRAME_RATE = 60;
   var FRAMES_PER_SECOND_INTERVAL = 1000 / FRAME_RATE;
   
   // Game Item Objects
+  var positionX = 0; // the x-coordinate location for the box
+  var speedX = 0; // the speed for the box along the x-axis
+  var positionY = 0; // the y-coordinate location for the box
+  var speedY = 0; // the speed for the box along the y-axis
 
 
   // one-time setup
@@ -44,28 +43,29 @@ function runProgram(){
   by calling this function and executing the code inside.
   */
   function newFrame() {
-    
-
+    repositionGameItem();
+    redrawGameItem();
   }
   
   /* 
   Called in response to events.
   */
-  function handleKeyDown(event) {
-    if (event.which === KEY.ArrowRight) {
-      console.log("right pressed");
-    } 
-    
-    else if (event.which === KEY.ArrowDown) {
-      console.log("Down pressed");
+  function handleKeyDown(event){
+    if (event.which === KEY.Right){ 
+      speedX = 5;
+      console.log("right pressed")
     }
-
-    else if (event.which === KEY.ArrowUp) {
-      console.log("Up pressed");
+    else if (event.which === KEY.Down){
+      speedY = -5;
+      console.log("Down pressed")
     }
-
-    else if (event.which === KEY.ArrowLeft) {
-      console.log("Left pressed");
+    else if (event.which === KEY.Up){ 
+      speedY = 5;
+      console.log("Up pressed")
+    }
+    else if (event.which === KEY.Left){
+      speedX = -5;
+      console.log("Left pressed")
     }
   }
   console.log(handleKeyDown);
@@ -73,6 +73,16 @@ function runProgram(){
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
 
+  function repositionGameItem(){
+    positionX += speedX;
+    positionY += speedY;
+  }
+  function redrawGameItem(){
+    $("#gameItem").css("left", positionX);
+    $("#gameItem").css("right", positionX);
+    $("#gameItem").css("top", positionY);
+    $("#gameItem").css("bottom", positionY);
+  }
   
   function endGame() {
     // stop the interval timer
