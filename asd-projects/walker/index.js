@@ -8,10 +8,10 @@ function runProgram(){
   ////////////////////////////////////////////////////////////////////////////////
   
   var KEY = {
-    "LEFT": 37,
-    "RIGHT": 39,
-    "UP": 38,
-    "DOWN": 40,
+    "Left": 37,
+    "Right": 39,
+    "Up": 38,
+    "Down": 40,
   }
   
   
@@ -33,7 +33,7 @@ function runProgram(){
   // one-time setup
   var interval = setInterval(newFrame, FRAMES_PER_SECOND_INTERVAL);   // execute newFrame every 0.0166 seconds (60 Frames per second)
   $(document).on('keydown', handleKeyDown);                           // change 'eventType' to the type of event you want to handle
-
+  $(document).on('keyup', handleKeyUp);  
   ////////////////////////////////////////////////////////////////////////////////
   ///////////////////////// CORE LOGIC ///////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -56,11 +56,11 @@ function runProgram(){
       console.log("right pressed")
     }
     else if (event.which === KEY.Down){
-      speedY = -5;
+      speedY = 5;
       console.log("Down pressed")
     }
     else if (event.which === KEY.Up){ 
-      speedY = 5;
+      speedY = -5;
       console.log("Up pressed")
     }
     else if (event.which === KEY.Left){
@@ -88,8 +88,6 @@ function runProgram(){
       console.log("Left released")
     }
   }
-  console.log(handleKeyDown);
-  console.log(handleKeyUp);
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
@@ -100,9 +98,7 @@ function runProgram(){
   }
   function redrawGameItem(){
     $("#gameItem").css("left", positionX);
-    $("#gameItem").css("right", positionX);
     $("#gameItem").css("top", positionY);
-    $("#gameItem").css("bottom", positionY);
   }
   
   function endGame() {
