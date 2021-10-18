@@ -68,7 +68,28 @@ function runProgram(){
       console.log("Left pressed")
     }
   }
+
+
+  function handleKeyUp(event){
+    if (event.which === KEY.Right){ 
+      speedX = 0;
+      console.log("right released")
+    }
+    else if (event.which === KEY.Down){
+      speedY = 0;
+      console.log("Down released")
+    }
+    else if (event.which === KEY.Up){ 
+      speedY = 0;
+      console.log("Up released")
+    }
+    else if (event.which === KEY.Left){
+      speedX = 0;
+      console.log("Left released")
+    }
+  }
   console.log(handleKeyDown);
+  console.log(handleKeyUp);
   ////////////////////////////////////////////////////////////////////////////////
   ////////////////////////// HELPER FUNCTIONS ////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////////
