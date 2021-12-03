@@ -7,11 +7,11 @@ What ifs will there be? circle hitting all sides of the walls, circle hitting th
 What are the visual game components? the paddles and the ball
 Which will be static? the board not moving and the walls around the paddle and ball (the board)
 Which will be animated? the ball, the paddle, the point score (the box)
-What data will you need to manage each game component? positionX, SpeedX, frameRate, if statements
+What data will you need to manage each game component? scoreCount, scoreUpdate,. ballStartPosition, Paddle1StartPostition, PaddleTwoStartPostition, positionX, positionY, SpeedX, speedY, frameRate, paddles, scoreboard player 1, scoreboard player 2, ballSpeeed
         Events / Logic
 What events will occur in this game? timer, keyboard
 How do those events affect the data of the program? keyboard makes the paddles move while timer makes the timer
 For each "event", write out the high-level logic of what will happen. It is better (and tricky) to be as specific as you can while remaining high-level!
 
-whenever the up or down arrow key is clicked the paddles will reigster it and move up and down the board, whenevever thje timer reaches 0, the game will restart the point score
-the timer again, and the paddle and ball in the middle of the board
+whenever the up or down arrow key is clicked the player numbert 1 paddles will reigster it and move up and down the board, then the w and s arrow key will control the
+player number 2 paddle in the game, the paddles and ball will be at their staring positions and won;t start the game until w, a, up, and down are pressed oon the browser
