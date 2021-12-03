@@ -1,0 +1,17 @@
+        User Story / Gameplay
+Describe the gameplay 2 bars hit a circle towards each other
+What are the conditions when the game begins? the ball must past the bar or hit the bar/ the walls
+Does the game have an end? If so, what are the conditions for when it ends? yes, when one player gets 11 points 
+What ifs will there be? circle hitting all sides of the walls, circle hitting the paddle, circle getting past the paddle, adding a point into the game
+        Visual Game Components:
+What are the visual game components? the paddles and the ball
+Which will be static? the board not moving and the walls around the paddle and ball (the board)
+Which will be animated? the ball, the paddle, the point score (the box)
+What data will you need to manage each game component? positionX, SpeedX, frameRate, if statements
+        Events / Logic
+What events will occur in this game? timer, keyboard
+How do those events affect the data of the program? keyboard makes the paddles move while timer makes the timer
+For each "event", write out the high-level logic of what will happen. It is better (and tricky) to be as specific as you can while remaining high-level!
+
+whenever the up or down arrow key is clicked the paddles will reigster it and move up and down the board, whenevever thje timer reaches 0, the game will restart the point score
+the timer again, and the paddle and ball in the middle of the board

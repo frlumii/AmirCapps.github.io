@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     // TODO: Call your apply function(s) here
 
-
+applyFilter();
 
 
 
@@ -17,12 +17,24 @@ $(document).ready(function(){
 /////////////////////////////////////////////////////////
 
 // TODO 1, 2 & 4: Create the applyFilter function here
+function applyFilter(reddify) {
+    for (var i = 0; i < image; i++){
+    } 
+}
 
+var rgbNumbers
 
+rgbStringToArray(rgbString); [
+
+]
+applyFilter(filterFunction)
 // TODO 6: Create the applyFilterNoBackground function
 
 
 // TODO 3 & 5: Create filter functions
 
+function reddify();{
+    [red,255];
+}
 
 // CHALLENGE code goes below here
