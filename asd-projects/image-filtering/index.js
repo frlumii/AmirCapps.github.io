@@ -27,7 +27,11 @@ function keepInBounds(boundColors) {
  if (boundColors > 255)
  return 255
  return boundColors
-
-}
-
+ 
+ for (var r = 0; r < image.length; r++) { 
+    var row = image[r];
+    
+    for (var c = 0; c < image.length; c++) { 
+    var value = imaage[r][c];
+    
 // CHALLENGE code goes below here
