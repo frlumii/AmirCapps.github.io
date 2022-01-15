@@ -22,16 +22,17 @@ function applyFilter() {
     } 
 }
 function keepInBounds(boundColors) {
+
     if (boundColors < 0)
  return  0;
  if (boundColors > 255)
  return 255
  return boundColors
- 
- for (var i = 0; i < image; i++) {
+}
+ for (var r = 0; r < image.length; r++) { 
     var row = image[r];
  }
-    for (var c = 0; c < image.length; c++) { 
-        var value = image[r][c];
-    }    
-// CHALLENGE code goes below here
+    for (var c = 0; c < row.length; c++) { 
+    var value = image[r][c];
+    }
+// CHALLENGE code goes below her
