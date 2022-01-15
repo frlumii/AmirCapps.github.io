@@ -20,14 +20,14 @@ applyFilter(reddify);
 function applyFilter() {
     for (var i = 0; i < image; i++){
     } 
-
+}
 function keepInBounds(boundColors) {
+    if (boundColors < 0)
  return  0;
-    }
+ if (boundColors > 255)
  return 255
-    }
  return boundColors
 
-
+}
 
 // CHALLENGE code goes below here
