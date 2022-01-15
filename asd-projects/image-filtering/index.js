@@ -18,8 +18,13 @@ applyFilter(reddify);
 
 // TODO 1, 2 & 4: Create the applyFilter function here
 function applyFilter() {
-    for (var i = 0; i < image; i++){
-    } 
+    for (var r = 0; r < image.length; r++) { 
+        var row = image[r];
+     
+        for (var c = 0; c < row.length; c++) { 
+        var value = image[r][c];
+        }
+    }
 }
 function keepInBounds(boundColors) {
 
@@ -29,10 +34,5 @@ function keepInBounds(boundColors) {
  return 255
  return boundColors
 }
- for (var r = 0; r < image.length; r++) { 
-    var row = image[r];
- }
-    for (var c = 0; c < row.length; c++) { 
-    var value = image[r][c];
-    }
+ 
 // CHALLENGE code goes below her
