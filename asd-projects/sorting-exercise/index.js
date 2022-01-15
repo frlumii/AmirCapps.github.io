@@ -35,7 +35,8 @@ var index = await partition(array, left, right);
 
 
 // TODOs 4 & 5: Implement partition
-
+function partition(array, left, right);
+return 
 
 // TODO 1: Implement swap
 swap(i, j, array);
