@@ -22,8 +22,8 @@ function applyFilter() {
         var row = image[r];
      
         for (var c = 0; c < row.length; c++) { 
-        var rgbStrings = image[r][c];
-        var  rgbNumbers = rgbStringToArray (rgbString)   
+        var rgbString = image[r][c];
+        var  rgbNumbers = rgbStringToArray (rgbNumbers)   
     rgbNumbers [RED] = 255;
 
     
