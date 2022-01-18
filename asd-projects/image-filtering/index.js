@@ -22,8 +22,12 @@ function applyFilter() {
         var row = image[r];
      
         for (var c = 0; c < row.length; c++) { 
-        var value = image[r][c];
-        }
+        var rgbStrings = image[r][c];
+        var  rgbNumbers = rgbStringToArray (rgbString)   
+    rgbNumbers [RED] = 255;
+
+    
+    }
     }
 }
 function keepInBounds(boundColors) {
@@ -35,5 +39,5 @@ function keepInBounds(boundColors) {
  return boundColors
 }
  
-var  rgbNumbers = rgbStringToArray (rgbString)
+
 // CHALLENGE code goes below her
