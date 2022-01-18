@@ -28,7 +28,7 @@ function applyFilter() {
 
     rgbString = rgbArrayToString (rgbNumbers);
     
-     rgbString = image[r][c];
+     image = rgbString[r][c];
     }
     }
 }
