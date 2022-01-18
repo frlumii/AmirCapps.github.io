@@ -22,12 +22,13 @@ function applyFilter() {
         var row = image[r];
      
         for (var c = 0; c < row.length; c++) { 
-        var rgbString = rgbString[r][c];
+        var rgbString = image[r][c];
         var  rgbNumbers = rgbStringToArray (rgbString)   
     rgbNumbers [RED] = 255;
 
     rgbString = rgbArrayToString (rgbNumbers);
     
+     rgbString = image[r][c];
     }
     }
 }
