@@ -35,4 +35,5 @@ function keepInBounds(boundColors) {
  return boundColors
 }
  
+var  rgbNumbers = rgbStringToArray (rgbString)
 // CHALLENGE code goes below her
