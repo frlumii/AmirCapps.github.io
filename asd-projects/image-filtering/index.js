@@ -31,6 +31,10 @@ function applyFilter() {
     }
     }
 }
+
+function reddify (rgbStringToArray)
+
+
 function keepInBounds(boundColors) {
 
     if (boundColors < 0)
