@@ -26,7 +26,7 @@ function applyFilter() {
         var  rgbNumbers = rgbStringToArray (rgbString)   
     rgbNumbers [RED] = 255;
 
-   function rgbArrayToString (rgbNumbers);
+    rgbArrayToString = rgbString (rgbNumbers);
     
     }
     }
