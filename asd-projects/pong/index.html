@@ -11,8 +11,72 @@
   </head>
   
   <body>
-    <div id='board'>
-      <div id='gameItem'></div>
+
+
+
+     <!-- for the score-->
+     <div id="leftScore">
+      Left Paddle Score : 
+       <span id="leftScroreValue">
+        0
+       </span>
+     </div>
+
+    <div id="rightScore">
+      Right Paddle Score : 
+      <span id="rightScroreValue">
+       0
+      </span>
     </div>
+    
+
+    <div id='board'>
+      <!--left paddle-->
+      <div id="leftPaddle" ></div>
+
+       <!--right paddle-->
+       <div id="rightPaddle" ></div>
+
+       <!--ball-->
+       <div id="ball"></div>
+
+       <!--net-->
+       <div id="net"></div>
+
+      
+
+       <!--instructions-->
+        <div id="instructions_score">
+          
+              <div id="instruction_left">
+                <h2>Left Paddle</h2>
+                
+                <div>
+                  <strong>Move Up:</strong> A
+
+                  <br/>
+                  <strong>Move Down:</strong> D
+                </div>
+              </div>
+
+
+              <div id="instruction_right">
+                <h2>Right Paddle</h2>
+              
+                <div>
+                  <strong>Move Up:</strong> J
+
+                  <br/>
+                  <strong>Move Down:</strong> K
+                </div>
+              </div>
+
+       </div>
+
+
+    </div>
+
+    <!--button to restart game-->
+    <input type="button" value="Start Game" id="gameButton" style="font-size:45px;display:block;">
   </body>
 </html>
